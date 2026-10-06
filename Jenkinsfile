@@ -51,6 +51,8 @@ pipeline {
             steps {
                 script {
                     sh "kubectl get all"
+                    sh "kubectl get nodes -o wide"
+                    sh "kubectl get ingress -o wide"
                 }
             }
         }
